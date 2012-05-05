@@ -23,6 +23,10 @@ module ActsAsTaggableOn::Taggable
             def #{tag_type}_from(owner)
               owner_tag_list_on(owner, '#{tag_type}')
             end      
+
+            def #{tag_type}_list_from(owner)
+              #{tag_type}_from(owner).to_s
+            end                  
           )
         end        
       end
